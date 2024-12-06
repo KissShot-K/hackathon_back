@@ -1,0 +1,20 @@
+version: '3.8' # Docker Composeファイルのバージョン
+
+services:
+  db: # サービス名
+    image: mysql:8.0 # 使用するMySQLイメージ
+    container_name: mysql-container # コンテナ名
+    environment: # 環境変数を設定
+      MYSQL_ROOT_PASSWORD: root_password # rootユーザーのパスワード
+      MYSQL_DATABASE: hackathon # 初期データベース名
+      MYSQL_USER: user # ユーザー名
+      MYSQL_PASSWORD: password # ユーザーパスワード
+    ports:
+      - "3306:3306" # ホストとコンテナ間で公開するポート
+    volumes:
+      - db_data:/var/lib/mysql # 永続的なデータストレージ
+
+volumes:
+  db_data: # 永続ストレージ用のボリューム定義
+
+
