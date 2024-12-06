@@ -65,6 +65,7 @@ func init() {
 	mysqlDatabase := os.Getenv("MySQL_DATABASE")
 	mysqlHost := os.Getenv("MySQL_HOST")
 	fmt.Printf("User: %s\n", mysqlUser)
+	fmt.Printf("User: %s\n", mysqlUser)
 	fmt.Printf("Password: %s\n", mysqlUserPwd)
 	fmt.Printf("Database: %s\n", mysqlDatabase)
 	fmt.Printf("mysqlHost: %s\n", mysqlHost)
