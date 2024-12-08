@@ -164,8 +164,8 @@ func generateContentFromText(w io.Writer, projectID, promptText string) string {
 func handler(w http.ResponseWriter, r *http.Request) {
 	// CORSヘッダーを設定
 	//w.Header().Set("Access-Control-Allow-Origin", "http://localhost:3000")
-	//w.Header().Set("Access-Control-Allow-Origin", "https://hackathon-frontend-delta.vercel.app")
-	w.Header().Set("Access-Control-Allow-Origin", "https://hackathon-frontend-h56mj8shn-kissshot-ks-projects.vercel.app")
+	w.Header().Set("Access-Control-Allow-Origin", "https://hackathon-frontend-delta.vercel.app")
+	//w.Header().Set("Access-Control-Allow-Origin", "https://hackathon-frontend-h56mj8shn-kissshot-ks-projects.vercel.app")
 	switch r.Method {
 	case http.MethodPost:
 		var tweet TweetsResForHTTPGet
